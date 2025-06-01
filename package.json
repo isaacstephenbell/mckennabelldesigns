@@ -1,62 +1,36 @@
 {
-  "name": "animejs",
-  "version": "4.0.2",
-  "homepage": "https://animejs.com",
+  "name": "mckenna-bell-designs",
+  "version": "1.0.0",
+  "description": "McKenna Bell Designs - Creative Design Portfolio and Landing Pages",
+  "main": "mckenna-bell-designs.html",
+  "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juliangarnier/anime.git"
+    "url": "git+https://github.com/isaacstephenbell/mckennabelldesigns.git"
   },
-  "description": "JavaScript animation engine",
-  "main": "lib/anime.umd.js",
-  "module": "lib/anime.esm.js",
-  "types": "types/index.d.ts",
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./types/index.d.ts",
-      "import": "./lib/anime.esm.js",
-      "require": "./lib/anime.cjs"
-    },
-    "./package.json": "./package.json"
-  },
+  "homepage": "https://github.com/isaacstephenbell/mckennabelldesigns",
+  "author": "Isaac Stephen Bell <isaacstephenbell@gmail.com>",
   "license": "MIT",
-  "author": "Julian Garnier <hello@julian.gr>",
-  "sideEffects": false,
-  "bugs": {
-    "url": "https://github.com/juliangarnier/anime/issues"
+  "keywords": [
+    "design",
+    "portfolio",
+    "creative",
+    "web-design",
+    "landing-pages"
+  ],
+  "scripts": {
+    "dev": "python -m http.server 8000 || python3 -m http.server 8000 || npx http-server",
+    "build": "echo 'No build process needed for static HTML site' && exit 0",
+    "start": "npx http-server -p 3000"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   },
   "files": [
-    "lib",
-    "types"
-  ],
-  "keywords": [
-    "anime",
-    "anime.js",
-    "animation",
-    "JavaScript",
-    "CSS",
-    "transforms",
-    "SVG",
-    "canvas"
-  ],
-  "devDependencies": {
-    "@rollup/plugin-terser": "^0.4.4",
-    "browser-sync": "^2.29.3",
-    "chai": "^4.3.10",
-    "mocha": "^10.2.0",
-    "rollup": "^4.9.1",
-    "rollup-plugin-filesize": "^10.0.0",
-    "rollup-plugin-ts": "^3.4.5",
-    "three": "^0.160.0",
-    "typescript": "5.1.6"
-  },
-  "scripts": {
-    "dev": "rollup -c -w",
-    "dev-types": "types=true rollup -c -w",
-    "build": "build=true types=true rollup -c",
-    "release": "build=true release=true types=true rollup -c",
-    "open-examples": "browser-sync start --startPath examples --server --no-notify --directory --files '**/*.js'",
-    "test-browser": "browser-sync start --startPath tests/index.html --server --files '**/*.js' --no-notify --directory",
-    "test-node": "node --allow-natives-syntax \"node_modules/.bin/mocha\" -u tdd --timeout 20000 \"./tests/suites/node.test.js\""
-  }
+    "*.html",
+    "assets/",
+    "examples/",
+    "src/",
+    "lib/"
+  ]
 }
