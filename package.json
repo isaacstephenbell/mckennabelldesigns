@@ -18,14 +18,6 @@
     "web-design",
     "landing-pages"
   ],
-  "scripts": {
-    "dev": "python -m http.server 8000 || python3 -m http.server 8000 || npx http-server",
-    "build": "echo 'No build process needed for static HTML site' && exit 0",
-    "start": "npx http-server -p 3000"
-  },
-  "devDependencies": {
-    "http-server": "^14.1.1"
-  },
   "files": [
     "*.html",
     "assets/",
